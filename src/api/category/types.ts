@@ -17,12 +17,12 @@ export interface Good {
 }
 
 export interface Category {
-  id: string;
-  name: string;
-  picture: string;
-  children: Children[];
-  goods: Good[];
-  open: boolean;
+  id?: string;
+  name?: string;
+  picture?: string;
+  children?: Children[];
+  goods?: Good[];
+  open?: boolean;
 }
 
 export interface ResObject {

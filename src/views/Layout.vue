@@ -1,19 +1,24 @@
 <script lang="ts">
 export default {
   name: "app-layout",
-  components: { AppTopNav },
 };
 </script>
 
 <script lang="ts" setup>
+import AppHeader from "@/components/app-header.vue";
 import AppTopNav from "@/components/app-top-nav.vue";
 import { RouterView } from "vue-router";
+import { useCategoryStore } from "@/stores/category";
+const categoryStore = useCategoryStore();
+categoryStore.getList();
 </script>
 
 <template>
   <!-- app-top-nav -->
   <AppTopNav></AppTopNav>
-  <div class="app-header">app-header</div>
+  <!-- app-top-nav.vue -->
+  <AppHeader></AppHeader>
+
   <div class="app-body">
     <RouterView></RouterView>
   </div>
