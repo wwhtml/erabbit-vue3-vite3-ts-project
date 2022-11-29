@@ -42,6 +42,11 @@ import AppHeaderNav from "./app-header-nav.vue";
       height: 132px;
       text-indent: -9999px;
       background: url(../assets/images/logo.png) no-repeat center 18px / contain;
+      //相当于下面的配置
+      // background: url(../assets/images/logo.png);
+      // background-repeat: no-repeat;
+      // background-position: center 18px;
+      // background-size: contain; //contain	把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。
     }
   }
 
