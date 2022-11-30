@@ -4,10 +4,24 @@ export default {
 };
 </script>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import HomeCategory from "./components/home-category.vue";
+</script>
 
 <template>
-  <div>home</div>
+  <div class="home-view">
+    <div class="home-entery">
+      <div class="container">
+        <!-- 左侧分类 -->
+        <HomeCategory></HomeCategory>
+
+        <!-- 轮播图 -->
+      </div>
+    </div>
+  </div>
 </template>
 
-<style scoped lang="less"></style>
+<style scoped lang="less">
+.home-view {
+}
+</style>
