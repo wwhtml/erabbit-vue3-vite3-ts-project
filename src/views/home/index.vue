@@ -6,7 +6,7 @@ export default {
 
 <script lang="ts" setup>
 import HomeCategory from "./components/home-category.vue";
-import Skeleton from "@/components/library/xtx-skeleton.vue";
+import HomeBanner from "./components/home-banner.vue";
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import Skeleton from "@/components/library/xtx-skeleton.vue";
         <HomeCategory></HomeCategory>
 
         <!-- 轮播图 -->
-        <Skeleton></Skeleton>
+        <HomeBanner></HomeBanner>
       </div>
     </div>
   </div>
@@ -25,5 +25,6 @@ import Skeleton from "@/components/library/xtx-skeleton.vue";
 
 <style scoped lang="less">
 .home-view {
+  position: relative;
 }
 </style>

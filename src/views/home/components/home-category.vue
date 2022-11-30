@@ -88,7 +88,12 @@ const currCategory = computed(() => {
 <style scoped lang="less">
 .home-category {
   width: 250px;
+  height: 500px;
+
   background: rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 99;
+
   .menu {
     .menu-item {
       height: 50px;
@@ -103,6 +108,11 @@ const currCategory = computed(() => {
       }
     }
   }
+  &:hover {
+    .layer {
+      display: block;
+    }
+  }
 }
 .layer {
   width: 990px;
@@ -111,7 +121,7 @@ const currCategory = computed(() => {
   position: absolute;
   left: 250px;
   top: 0;
-  // display: none;
+  display: none;
   padding: 0 15px;
   h4 {
     font-size: 20px;
