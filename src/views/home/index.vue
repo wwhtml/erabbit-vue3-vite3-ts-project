@@ -6,6 +6,7 @@ export default {
 
 <script lang="ts" setup>
 import HomeCategory from "./components/home-category.vue";
+import Skeleton from "@/components/library/xtx-skeleton.vue";
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import HomeCategory from "./components/home-category.vue";
         <HomeCategory></HomeCategory>
 
         <!-- 轮播图 -->
+        <Skeleton></Skeleton>
       </div>
     </div>
   </div>

@@ -9,6 +9,7 @@ import { computed, ref } from "vue";
 //获取category数据
 import { useCategoryStore } from "@/stores/category";
 import { storeToRefs } from "pinia";
+import XtxSkeleton from "@/components/library/xtx-skeleton.vue";
 const categoryStore = useCategoryStore();
 
 const { list } = storeToRefs(categoryStore);
@@ -43,11 +44,21 @@ const currCategory = computed(() => {
         @mouseenter="categoryId = item.id"
       >
         <a href="#">{{ item.name }}</a>
-        <!-- <template> -->
-        <a href="#" v-for="sub in item.children" :key="sub.id">{{
-          sub.name
-        }}</a>
-        <!-- </template> -->
+        <template v-if="item.children">
+          <a href="#" v-for="sub in item.children" :key="sub.id">{{
+            sub.name
+          }}</a>
+        </template>
+
+        <span v-else>
+          <XtxSkeleton
+            width="60px"
+            height="18px"
+            style="margin-right: 5px"
+            bg="rgba(255,255,255,0.2)"
+          />
+          <XtxSkeleton width="50px" height="18px" bg="rgba(255,255,255,0.2)" />
+        </span>
       </li>
     </ul>
     <!-- 弹层 -->
@@ -177,6 +188,18 @@ const currCategory = computed(() => {
         }
       }
     }
+  }
+}
+
+.xtx-skeleton {
+  animation: fade 1s linear infinite alternate;
+}
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
   }
 }
 </style>
