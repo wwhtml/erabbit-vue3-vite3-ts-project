@@ -1,15 +1,9 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import { findHot } from "@/api/home";
+import type { Hot } from "@/api/home/types";
 import HomePanel from "./home-panel.vue";
 import HomeSkeleton from "./home-skeleton.vue";
-
-export interface Hot {
-  id: string;
-  picture: string;
-  title: string;
-  alt: string;
-}
 
 //商品列表数据
 const hots = ref<Hot[]>([]);

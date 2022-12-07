@@ -1,17 +1,11 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import { findNew } from "@/api/home";
+import type { New } from "@/api/home/types";
+
 import HomePanel from "./home-panel.vue";
 import HomeSkeleton from "./home-skeleton.vue";
 
-export interface New {
-  id: string;
-  name: string;
-  desc: string;
-  price: string;
-  picture: string;
-  discount?: any;
-}
 //商品列表数据
 const goods = ref<New[]>([]);
 

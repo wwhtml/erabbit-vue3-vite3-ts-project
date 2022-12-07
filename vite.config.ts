@@ -6,7 +6,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 
 export default defineConfig(({ mode }) => {
   //注意：vite中不能直接访问env，所以只能通过这种方式访问
-  const ENV1 = loadEnv(mode, process.cwd(), "");
+  // const ENV1 = loadEnv(mode, process.cwd(), "");
   // console.log(ENV1);
   return {
     plugins: [vue(), vueJsx()],

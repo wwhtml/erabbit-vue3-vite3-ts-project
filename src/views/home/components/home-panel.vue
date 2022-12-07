@@ -6,7 +6,7 @@ defineProps({
   },
   subTitle: {
     type: String,
-    default: "subtitle",
+    default: "",
   },
 });
 </script>
