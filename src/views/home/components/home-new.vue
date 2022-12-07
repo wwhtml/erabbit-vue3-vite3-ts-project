@@ -7,6 +7,7 @@ import HomePanel from "./home-panel.vue";
 import HomeSkeleton from "./home-skeleton.vue";
 
 //商品列表数据
+//在这里添加一个类型，dom模板中使用的时候才会有代码提示
 const goods = ref<New[]>([]);
 
 const getNewList = async () => {
