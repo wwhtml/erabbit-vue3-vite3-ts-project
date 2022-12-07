@@ -6,14 +6,34 @@ interface Props {
   animated?: boolean;
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   bg: "red",
   width: "100px",
   height: "100px",
   animated: false,
 });
 
-console.log(props);
+//defineProps:属性不需要显示的引入
+// defineProps({
+//   bg: {
+//     type: String,
+//     default: "#efefef",
+//   },
+//   width: {
+//     type: String,
+//     default: "100px",
+//   },
+//   height: {
+//     type: String,
+//     default: "100px",
+//   },
+//   animated: {
+//     type: Boolean,
+//     default: false,
+//   },
+// });
+
+// console.log(props);
 </script>
 
 <template>
