@@ -93,3 +93,4 @@ export interface GoodsObject {
   msg: string;
   result: Goods[];
 }
+//special:直接写在了vue组件中
