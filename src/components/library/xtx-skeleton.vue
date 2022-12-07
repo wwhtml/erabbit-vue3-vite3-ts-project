@@ -1,3 +1,9 @@
+<script lang="ts">
+export default {
+  name: "XtxSkeleton", //在注册组件的收通常使用着一种方式
+};
+</script>
+
 <script setup lang="ts">
 interface Props {
   bg?: string;

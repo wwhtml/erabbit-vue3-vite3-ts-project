@@ -35,6 +35,10 @@ import HomeSpecial from "./components/home-special.vue";
     <HomeProduct></HomeProduct>
     <!-- 最新专题 -->
     <HomeSpecial></HomeSpecial>
+    <!-- 测试全局组件 -->
+    <!-- <XtxSkeleton></XtxSkeleton>
+    <br />
+    <xtx-skeleton></xtx-skeleton> -->
   </div>
 </template>
 

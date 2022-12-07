@@ -11,11 +11,13 @@ import "@/styles/common.less";
 
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 
+import ui from "./components/library";
+
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 
 const app = createApp(App);
 
-app.use(router).use(pinia);
+app.use(router).use(ui).use(pinia);
 
 app.mount("#app");

@@ -1,3 +1,9 @@
+<script lang="ts">
+export default {
+  name: "XtxCarousel",
+};
+</script>
+
 <script setup lang="ts">
 import { onUnmounted, ref, watch } from "vue";
 
