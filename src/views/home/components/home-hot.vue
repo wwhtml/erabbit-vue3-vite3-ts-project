@@ -6,7 +6,7 @@ import HomePanel from "./home-panel.vue";
 import HomeSkeleton from "./home-skeleton.vue";
 
 //商品列表数据
-const hots = ref<Hot[]>([]);
+const hots = ref<Hot[]>();
 
 const getHotList = async () => {
   const { result } = await findHot();
@@ -21,7 +21,7 @@ getHotList();
       <!-- <template #right>
         <div class="more">查看全部1></div>
       </template> -->
-      <ul class="goods-list" v-if="hots.length">
+      <ul class="goods-list" v-if="hots && hots.length">
         <li v-for="hot in hots" :key="hot.id">
           <a href="#">
             <img :src="hot.picture" alt="" />

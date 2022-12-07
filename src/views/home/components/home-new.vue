@@ -8,7 +8,7 @@ import HomeSkeleton from "./home-skeleton.vue";
 
 //商品列表数据
 //在这里添加一个类型，dom模板中使用的时候才会有代码提示
-const goods = ref<New[]>([]);
+const goods = ref<New[]>();
 
 const getNewList = async () => {
   const { result } = await findNew();
@@ -23,7 +23,7 @@ getNewList();
       <template #right>
         <div class="more">查看全部1></div>
       </template>
-      <ul class="goods-list" v-if="goods.length">
+      <ul class="goods-list" v-if="goods && goods.length">
         <li v-for="good in goods" :key="good.id">
           <a href="#">
             <img :src="good.picture" alt="" />

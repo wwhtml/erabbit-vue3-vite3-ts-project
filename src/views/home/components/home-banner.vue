@@ -4,7 +4,7 @@ import { findBanner } from "@/api/home";
 import type { Banner } from "@/api/home/types";
 import XtxCarousel from "@/components/library/xtx-carousel.vue";
 
-const sliders = ref<Banner[]>([]);
+const sliders = ref<Banner[]>();
 
 findBanner().then((data) => {
   sliders.value = data.result;

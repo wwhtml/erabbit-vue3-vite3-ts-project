@@ -6,7 +6,7 @@ import { ref } from "vue";
 import { findGoods } from "@/api/home/index";
 import type { Goods } from "@/api/home/types";
 
-const products = ref<Goods[]>([]);
+const products = ref<Goods[]>();
 
 const getGoodsList = async () => {
   const { result } = await findGoods();

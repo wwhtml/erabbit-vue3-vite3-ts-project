@@ -5,7 +5,7 @@ import { findBrand } from "@/api/home";
 import type { Brand } from "@/api/home/types";
 import XtxSkeleton from "@/components/library/xtx-skeleton.vue";
 
-const brands = ref<Brand[]>([]);
+const brands = ref<Brand[]>();
 
 const getBrandList = async () => {
   const { result } = await findBrand(10);
@@ -42,7 +42,7 @@ const toggle = (step: number) => {
       <div class="brand-box">
         <Transition name="fade">
           <ul
-            v-if="brands.length"
+            v-if="brands && brands.length"
             class="brand-list"
             :style="{ transform: `translateX(${-index * 1240}px)` }"
           >
